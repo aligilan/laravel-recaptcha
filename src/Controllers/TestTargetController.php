@@ -10,23 +10,24 @@
 
 namespace Biscolab\ReCaptcha\Controllers;
 
+use Biscolab\ReCaptcha\Traits\Recaptcha;
 use Illuminate\Routing\Controller;
 
 /**
  * Class ReCaptchaController
  * @package Biscolab\ReCaptcha\Controllers
  */
-class ReCaptchaController extends Controller
+class TestTargetController extends Controller
 {
+    use Recaptcha;
 
-	/**
-	 * @return array
-	 */
 	public function validateV3(): array
 	{
+	    // Captcha validation
+	    $this->check_recaptcha_validation();
 
-		$token = request()->input(config('recaptcha.default_token_parameter_name', 'token'), '');
+	    // Your other validations
 
-		return recaptcha()->validate($token);
+        // Rest of the code ....
 	}
 }

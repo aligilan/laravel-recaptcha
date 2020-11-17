@@ -37,7 +37,7 @@ return [
      * get more info @ https://developers.google.com/recaptcha/docs/versions
      *
      */
-    'version'                      => 'v2',
+    'version'                      => 'v3',
 
     /**
      *
@@ -58,7 +58,7 @@ return [
      *
      * Default route called to check the Google reCAPTCHA token
      * @since v3.2.0
-     *
+     * TODO: useless
      */
     'default_validation_route'     => 'biscolab-recaptcha/validate',
 
@@ -78,7 +78,7 @@ return [
      * @since v3.6.0
      *
      */
-    'default_language'             => null,
+    'default_language'             => 'fa',
 
     /**
      *
